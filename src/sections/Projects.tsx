@@ -89,7 +89,7 @@ export const Projects = () => {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/grudzinskio"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-dark-400 hover:text-white transition-colors group"

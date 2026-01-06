@@ -1,13 +1,16 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Background } from './components/Background';
+import { StarBackground } from './components/StarBackground';
 import { Navbar } from './components/Navbar';
-import { Intro } from './sections/Intro';
-import { Thinking } from './sections/Thinking';
+import { LetterCollision } from './components/LetterCollision';
+import { HeroIntroSection } from './sections/HeroIntroSection';
+import { ParallaxImages } from './sections/ParallaxImages';
+import { SlidingImages } from './sections/SlidingImages';
 import { Systems } from './sections/Systems';
 import { Projects } from './sections/Projects';
+import { NavigationPanels } from './sections/NavigationPanels';
 import { Experience } from './sections/Experience';
-import { LoopVideo } from './sections/LoopVideo';
 import { Contact } from './sections/Contact';
 
 export const App = () => {
@@ -22,14 +25,17 @@ export const App = () => {
   const introY = useTransform(scrollYProgress, [0, 0.1], [0, -50]);
 
   // Statement section animations
-  const statementOpacity = useTransform(scrollYProgress, [0.08, 0.14, 0.18, 0.22], [0, 1, 1, 0]);
-  const statementY = useTransform(scrollYProgress, [0.08, 0.14], [40, 0]);
+  const statementOpacity = useTransform(scrollYProgress, [0.05, 0.10, 0.18, 0.22], [0, 1, 1, 0]);
+  const statementY = useTransform(scrollYProgress, [0.05, 0.10], [40, 0]);
   const statementScale = useTransform(scrollYProgress, [0.18, 0.22], [1, 0.95]);
 
   return (
     <div ref={containerRef} className="relative">
       {/* Animated Background */}
       <Background />
+      
+      {/* Star Background - Disabled for performance */}
+      {/* <StarBackground /> */}
 
       {/* Navigation */}
       <Navbar />
@@ -40,7 +46,7 @@ export const App = () => {
         style={{ scaleX: scrollYProgress }}
       />
 
-      {/* Section 1: Intro Hero */}
+      {/* Section 1: Letter Collision Intro */}
       <section id="home" className="sticky top-0 h-screen flex items-center justify-center z-10">
         <motion.div
           style={{
@@ -50,7 +56,7 @@ export const App = () => {
           }}
           className="w-full"
         >
-          <Intro />
+          <LetterCollision />
         </motion.div>
       </section>
 
@@ -83,33 +89,43 @@ export const App = () => {
       {/* Spacer for statement scroll */}
       <div className="h-[50vh]" />
 
-      {/* Section 3: Thinking */}
-      <section className="relative z-20">
-        <Thinking />
+      {/* Section 3: Hero Intro with About Me */}
+      <section id="about" className="relative z-20">
+        <HeroIntroSection />
       </section>
 
-      {/* Section 4: Systems */}
+      {/* Section 4: Parallax Images Gallery */}
       <section className="relative z-20">
+        <ParallaxImages />
+      </section>
+
+      {/* Section 5: Sliding Project Showcase */}
+      <section className="relative z-20">
+        <SlidingImages />
+      </section>
+
+      {/* Section 6: Systems Pipeline */}
+      <section id="systems" className="relative z-20">
         <Systems />
       </section>
 
-      {/* Section 5: Projects */}
-      <section className="relative z-20">
+      {/* Section 7: Projects */}
+      <section id="projects" className="relative z-20">
         <Projects />
       </section>
 
-      {/* Section 6: Experience */}
+      {/* Section 8: Navigation Panels */}
       <section className="relative z-20">
+        <NavigationPanels />
+      </section>
+
+      {/* Section 9: Experience */}
+      <section id="experience" className="relative z-20">
         <Experience />
       </section>
 
-      {/* Section 7: Loop Video */}
-      <section className="relative z-20">
-        <LoopVideo />
-      </section>
-
-      {/* Section 8: Contact / Footer */}
-      <section className="relative z-20">
+      {/* Section 10: Contact / Footer */}
+      <section id="contact" className="relative z-20">
         <Contact />
       </section>
     </div>

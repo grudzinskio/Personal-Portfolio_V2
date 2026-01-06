@@ -1,0 +1,43 @@
+{
+  "personal": {
+    "name": "Oliver Grudzinski",
+    "title": "Computer Science Student & Full Stack Engineer",
+    "description": [
+      "Computer Science junior at MSOE and Full Stack Development Intern at TESCH Global, specializing in AI/ML systems, modern web applications, and scalable data solutions.",
+      "Passionate about leveraging cutting-edge technologies to solve complex technical challenges. Active member of MSOE AI Club and Society of Software Engineers, continuously exploring emerging innovations in machine learning and software architecture.",
+      "Eagle Scout with a proven track record of leadership, discipline, and delivering high-impact solutions."
+    ]
+  },
+  "education": {
+    "degree": "B.S. Computer Science",
+    "school": "Milwaukee School of Engineering",
+    "expectedGraduation": "Expected May 2027"
+  },
+  "currentRole": {
+    "title": "Full Stack Software Development Intern",
+    "company": "TESCH Global",
+    "status": "Current"
+  },
+  "expertise": [
+    {
+      "title": "Full-Stack Engineering",
+      "description": "Building responsive, scalable web applications with React, TypeScript, Node.js, and modern frameworks. Focus on clean architecture and exceptional user experiences.",
+      "icon": "Code"
+    },
+    {
+      "title": "AI & Machine Learning",
+      "description": "Developing intelligent systems using computer vision, NLP, and reinforcement learning. Expertise in PyTorch, TensorFlow, and LLM integration for production environments.",
+      "icon": "User"
+    },
+    {
+      "title": "Agile Project Leadership",
+      "description": "Leading cross-functional teams using Scrum and Agile methodologies. Driving efficient delivery through clear communication, iterative development, and strategic planning.",
+      "icon": "Briefcase"
+    },
+    {
+      "title": "Backend & Cloud Architecture",
+      "description": "Designing robust APIs, microservices, and database systems. Proficient in AWS, Docker, and building scalable cloud-native applications for high-performance computing.",
+      "icon": "Server"
+    }
+  ]
+}
